@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // run script when dom is loaded
+            document.addEventListener('DOMContentLoaded',function(){
+
+                //when correct answer is clicked change color to green
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click',function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                // when incorrect answer is clicked change color to red
+                let incorrects = document.querySelectorAll('.incorrect');
+                for(let i=0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click',function(){
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+            //check free response submission
+
+                document.querySelector('#check').addEventListener('click',function(){
+                    let input = document.querySelector('input');
+                    if(input.value == 'kenya'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    } else{
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'incorrect';
+                    }
+                });
+
+            });
+
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+
+                <h3> Q1. In the elliptic curve group defined by y2= x3- 17x + 16 over real numbers, what is P + Q if P = (0,-4) and Q = (1, 0)? </h3>
+                <button class="incorrect"> a (15, -56)</button>
+                <button class="incorrect"> b (-23, -43)</button>
+                <button class="incorrect"> c (69, 26)</button>
+                <button class="correct"> d (12, -86)</button>
+
+                <p id="feedback1"></p>
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+
+                <h3> Q.For the point P (7, 0) defined in the curve E13(1, 1). What is p?</h3>
+
+                <form>
+                    <input type="text">
+                    <button id="check">Check Answer</button>
+                </form>
+
+                <p id="feedback2"></p>
+
+
+
+
+
+
+            </div>
+        </div>
+    </body>
+</html>
