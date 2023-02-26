@@ -1,0 +1,15 @@
+sort1 uses: Bubblesort
+
+How do you know?: It stands in 2nd place as time comparision among three compared two files reversed 50k and random 50k
+
+sort2 uses: Mergesort.
+
+How do you know?: Time taken by this algorithm to sort things is least
+
+sort3 uses: Selectionsort
+
+How do you know?: It takes more time for sorted 50k set which is clear indication of selection sort
+
+
+
+
