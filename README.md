@@ -2,7 +2,7 @@
 
 C50  Introduction to Computer Science : 
 
-WEEK 0 : Scratch 
+WEEK 0 : Scratch <br/>
 WEEK 1 : C
 WEEK 2 : Arrays
 WEEK 3 : Algorithms
